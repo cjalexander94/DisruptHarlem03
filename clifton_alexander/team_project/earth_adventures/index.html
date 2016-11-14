@@ -20,6 +20,32 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <style>
+       #modal{
+        width: 400px;
+        background: #CACACA;
+        height: 300px;
+        box-shadow: 8px 8px 10px 4px;
+        margin: 0 auto;
+        margin-top:12%;
+        border-radius: 5px;
+       }
+
+       #close{
+        position: absolute;
+        right: -5px;
+        top:10px;
+       }
+
+    }
+
+    .glyphicon.hover{
+        color: red;
+    }
+
+
+    </style>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -97,14 +123,45 @@
                                 <a href="pricing.html">Pricing Table</a>
                             </li>
                         </ul>
-                    </li>
-                    <button type="button" class="btn btn-default navbar-btn "><i class="fa fa-user"></i> Sign in</button>
+                    </li> 
+                    <button type="button" id="login" class="btn btn-default navbar-btn "><i class="fa fa-user"></i> Sign in</button>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+   
+   <section id="modal" class="modal fade">
+
+   <div class="modal-body">
+   <form action="login.php" method="post" role="form">
+
+   <span id="close" onclick="close();" class="glyphicon glyphicon-remove pull-right"></span>
+
+   <div class="form-group">
+   <label for="email">Email Address</label>    
+   <input type="email" class="form-control" id="id" placeholder="Enter Email">
+   </div><!--Form group-->
+
+   <div class="form-group">
+   <label for="email">Password</label>    
+   <input type="password" class="form-control" id="id" placeholder="Password">
+   </div><!--Form group-->
+       
+   <div class="checkbox">
+       <label>
+           <input type="checkbox">Remember Me
+       </label>
+   </div><!--Checkbox-->
+
+   <button type"submit" class="btn btn-default">Submit</button>
+
+   <p>Don't have an account?<button type="button" class="btn btn-default" href="signup.html">Sign Up!</button></p>
+ 
+   </form><!--Form-->
+   </div><!--Modal Body-->
+   </section><!--Modal-->
 
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
@@ -277,7 +334,17 @@
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
-    })
+    });
+
+    $("#login").on('click', function(){
+        $("#modal").modal({show:true});
+    }); //Show Modal
+
+    $("#close").on('click', function(){
+        $("#modal").modal('hide');
+
+    });
+
     </script>
 
 </body>
