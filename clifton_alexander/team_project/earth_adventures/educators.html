@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <title>Earth Adventures</title>
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,11 +21,6 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <style>
-        body{
-        background-image: url("images/stars_img.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
        #modal{
         width: 400px;
         background: #CACACA;
@@ -33,16 +30,27 @@
         margin-top:12%;
         border-radius: 5px;
        }
-
        #close{
         position: absolute;
         right: -5px;
         top:10px;
        }
 
-       .glyphicon.hover{
-        color: red;
-    }
+         #modal2{
+        width: 400px;
+        background: #CACACA;
+        height: 300px;
+        box-shadow: 8px 8px 10px 4px;
+        margin: 0 auto;
+        margin-top:12%;
+        border-radius: 5px;
+       }
+       #close{
+        position: absolute;
+        right: -5px;
+        top:10px;
+       }
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -56,8 +64,8 @@
 
 <body>
 
-   <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -93,7 +101,7 @@
                         </ul>
                     </li>
                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="blog-home-1.html">Beginner</a>
@@ -107,7 +115,7 @@
                         </ul>
                     </li>
                      <li>
-                        <a href="parents.html">Parents</a>
+                        <a href="full-width.html">Parents</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Educators <b class="caret"></b></a>
@@ -137,74 +145,94 @@
         <!-- /.container -->
     </nav>
 
-    <section id="modal" class="modal fade">
+   <section id="modal" class="modal fade">
 
-       <div class="modal-body">
-       <form action="login.php" method="post" role="form">
+   <div class="modal-body">
+   <form action="login.php" method="post" role="form">
 
-       <span id="close" onclick="close();" class="glyphicon glyphicon-remove pull-right"></span>
+   <span id="close" onclick="close();" class="glyphicon glyphicon-remove pull-right"></span>
 
-       <div class="form-group">
-       <label for="email">Email Address</label>    
-       <input type="email" class="form-control" id="id" placeholder="Enter Email">
-       </div><!--Form group-->
+   <div class="form-group">
+   <label for="email">Email Address</label>    
+   <input type="email" class="form-control" id="id" placeholder="Enter Email">
+   </div><!--Form group-->
 
-       <div class="form-group">
-       <label for="email">Password</label>    
-       <input type="password" class="form-control" id="id" placeholder="Password">
-       </div><!--Form group-->
-           
-       <div class="checkbox">
-           <label>
-               <input type="checkbox">Remember Me
-           </label>
-       </div><!--Checkbox-->
+   <div class="form-group">
+   <label for="email">Password</label>    
+   <input type="password" class="form-control" id="id" placeholder="Password">
+   </div><!--Form group-->
+       
+   <div class="checkbox">
+       <label>
+           <input type="checkbox">Remember Me
+       </label>
+   </div><!--Checkbox-->
 
-       <button type"submit" class="btn btn-default">Submit</button>
+   <button type"submit" class="btn btn-default">Submit</button>
 
-       <p>Don't have an account?<button type="button" class="btn btn-default" href="signup.html">Sign Up!</button></p>
-     
-       </form><!--Form-->
-       </div><!--Modal Body-->
+   <p>Don't have an account?<button type="button" class="btn btn-default" href="signup.html">Sign Up!</button></p>
+ 
+   </form><!--Form-->
+   </div><!--Modal Body-->
    </section><!--Modal-->
 
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Marketing Icons Section -->
+        <!-- Page Heading/Breadcrumbs -->
+        <section id="about">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">
-                    Parents Join Us! 
+                <h1 class="page-header">Educators
                 </h1>
-                <p>
-                Earth Adventures is an interactive learning and gaming site for kids but it doesn't just stop there. We need you, the parents, to join in the fun. We wish to not only make children better students but to open their minds and make them want to learn more about various topics related to science. The games on this site are presented in a story format where a child can follow a character around the Earth and beyond. Each level or location features  different activities. Want to learn how you can join and what you can do? Look below!
-
-                     </p>
-                    <p>
-                    You looked below! Good job! Just click sign up on the top right corner of the page. After you sign up and your child has, you can go to link accounts to connect both your accounts. You just type in your child's email and select their name. You can also connect with teachers if they have a account set up. If the teacher sets up a lesson plan, you can see your child's progress. You, a parent, can also set up your own lesson plan! Now that you are ready, enjoy! If you have any questions, please go to the FAQ page.
-                        </p>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">About</li>
+                </ol>
             </div>
-            <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Your Account</button>
-  <button type="button" class="btn btn-default">Student Account</button>
-  <button type="button" class="btn btn-default">Link Accounts</button>
-  <button type="button" class="btn btn-default">Lesson Plan</button>
-  <br><br>
-</div>
- <hr>
+        </div>
+        <!-- /.row -->
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
+        <!-- Intro Content -->
+        <div class="row">
+            <div class="col-md-6">
+                <img src="http://www.theinclusionsolution.me/wp-content/uploads/2013/04/black-student-hand-raised-in-class.jpg" height="490px" width="500px">
             </div>
-        </footer>
+            <div class="col-md-6">
+                <h2>Educators</h2>
+                <button type="submit" id="newsletter" class="btn btn-default" href="newsletter.html">Sign Up For Our Newsletter</button>
+              </p>
+            </div>
+        </div>
+        
+    <section id="modal2" class="modal fade">
 
-    </div>
-    <!-- /.container -->
+   <div class="modal-body">
+   <form action="login.php" method="post" role="form">
+
+   <span id="close" onclick="close();" class="glyphicon glyphicon-remove pull-right"></span>
+
+   <div class="form-group">
+   <label for="first name">First Name</label>    
+   <input type="text" class="form-control" id="id" placeholder="First Name">
+   </div>
+
+    <div class="form-group">
+   <label for="last name">Last Name</label>    
+   <input type="text" class="form-control" id="id" placeholder="Last Name">
+   </div>
+
+   <div class="form-group">
+   <label for="email">Email Address</label>    
+   <input type="email" class="form-control" id="id" placeholder="Enter Email">
+   </div><!--Form group-->
+
+   <button type"submit" class="btn btn-default">Submit</button>
+ 
+   </form><!--Form-->
+   </div><!--Modal Body-->
+   </section><!--Modal-->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -212,16 +240,24 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script>
-        $("#login").on('click', function(){
+
+   <script>
+    $("#login").on('click', function(){
         $("#modal").modal({show:true});
     }); //Show Modal
 
-        $("#close").on('click', function(){
+    $("#close").on('click', function(){
         $("#modal").modal('hide');
-    }); //Hide Modal
+
+    });
+
+    $("#newsletter").on('click', function(){
+        $("#modal2").modal({show:true});
+    }); //Show Modal
+    $("#close").on('click', function(){
+        $("#modal2").modal('hide');
+    });
     </script>
 
-</body>
-
-</html>
+        </body>
+        <!-- /.row -->
