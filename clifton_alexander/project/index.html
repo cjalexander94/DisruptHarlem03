@@ -1,147 +1,416 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Finna</title>
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<style>
-  div.col-sm-1{
-    background-color: #a9c0e5;
-  }
-  div.col-sm-10{
-    background-color: #263856;
-  }
-</style>
+    <title>FINesse - The Personal Finance Solution</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <style>
+       #modal{
+        width: 400px;
+        background: #CACACA;
+        height: 300px;
+        box-shadow: 8px 8px 10px 4px;
+        margin: 0 auto;
+        margin-top:12%;
+        border-radius: 5px;
+       }
+
+       #close{
+        position: absolute;
+        right: -5px;
+        top:10px;
+       }
+
+        .glyphicon.hover{
+        color: red;
+    }
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
-<body>
-  <header class="navbar-inverse" role="banner">
-    <div class="container">
-         <nav role="navigation">
-     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><strong>FINesse</strong></a>
-      </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-    </div><!-- /.navbar-collapse -->
-   </div><!-- /.container-fluid -->
-  </nav>
-    </div>
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html#page-top">Finesse</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">Take control of your financial situation!</h1>
+                <hr>
+                <p>Start using Finesse to learn to gain financial security by way of reporting, budgeting and learning.  Finesse is the last resource you will have to use to keep track and improve your personal financial situation.</p>
+                <a class="btn btn-primary btn-xl" id="login">Sign In</a> <p>Or, scroll to find out more</p>
+            </div>
+        </div>
     </header>
 
-  <div class="jumbotron">
-    <h1>Welcome to FINesse</h1>
-   <p>Learn to Finesse.</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-  </div>
+   <section id="modal" class="modal fade">
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-  </ol>
+       <div class="modal-body">
+           <form action="login.php" method="post" role="form">
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="img_chania.jpg" alt="Chania">
-    </div>
+           <span id="close" onclick="close();" class="glyphicon glyphicon-remove pull-right"></span>
 
-    <div class="item">
-      <img src="img_chania2.jpg" alt="Chania">
-    </div>
+           <div class="form-group">
+               <label for="email">Email Address</label>    
+               <input type="email" class="form-control" id="id" placeholder="Enter Email">
+           </div><!--Form group-->
 
-    <div class="item">
-      <img src="img_flower.jpg" alt="Flower">
-    </div>
+           <div class="form-group">
+               <label for="email">Password</label>    
+               <input type="password" class="form-control" id="id" placeholder="Password">
+           </div><!--Form group-->
+               
+           <div class="checkbox">
+               <label>
+                   <input type="checkbox">Remember Me
+               </label>
+           </div><!--Checkbox-->
 
-    <div class="item">
-      <img src="img_flower2.jpg" alt="Flower">
-    </div>
-  </div>
+           <button type"submit" class="btn btn-default">Submit</button>
 
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-  
-  <div class="container">
-    <div class="row">
-    <div class="col-lg-1 col-sm-1">Test 1</div>
-    <div class="col-lg-10 col-sm-10">Test 2</div>
-    <div class="col-lg-1 col-sm-1">Test 3</div>
-  </div>
-  </div>
-   <!-- <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> ==$0
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1" class></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2" class></li>
-      </ol>
-      <div class="item active"> -->
+           <p>Don't have an account?<a href="sig-nup.html">Sign Up!<a></p>
+         
+           </form><!--Form-->
+       </div><!--Modal Body-->
+   </section><!--Modal-->
 
- <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 ">
+                     <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt=""><!--Video-->
+                </div>
+                <div class="col-lg-6 col-md-6 text-center">
+                    <h2 class="section-heading">See how easy it is to Finesse!</h2>
+                    <hr class="light">
+                    <p class="text-faded">Watch this video and see how easy it is for users to track their finances, start savings plans, generate financial statements, and receive helpful advice that allosw them to make important lifestyle changes necessary to staying financially secure.</p>
+                    <i href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">At Your Service</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-money text-primary sr-icons"></i>
+                        <h3>Save Money</h3>
+                        <p class="text-muted">We offer comprehensive tips as well as an autosave platform to make saving money simple.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-line-chart text-primary sr-icons"></i>
+                        <h3>Track your Saving &amp; Spending</h3>
+                        <p class="text-muted">Link to your accounts to keep accurate records of your spending habits.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-credit-card-alt text-primary sr-icons"></i>
+                        <h3>Credit Management</h3>
+                        <p class="text-muted">Learn how to get a handle of any credit card debt with real solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding" id="features"><!-- maybe include pictures of App screens-->
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Secure</h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row text-center">
+                    <div class="service-box">
+                        <i class="fa fa-lock fa-5x sr-icons" style="margin: -15px;"></i>
+                        <br>
+                        <br>
+                        <p >Our system runs through your bank and your information is protected on both ends.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Start to Finesse now!</h2>
+                <a href="sign-up.html" class="btn btn-default btn-xl sr-button">Sign Up</a>
+            </div>
+        </div>
+    </aside>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Questions? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>908.436.8910</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:cj.alexander94@gmail.com">cj.alexander94@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    <hr>
+    </section>
+
+
+    <footer>
+         <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><a class="about" href="#"> About</a></h4>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><a class="approach">Approach</a></h4>
+                    </div>
+                    <div class="panel-body">
+                    <ul>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Results</a></li>
+                    </ul>
+                    <br>
+                    <br>
+                    <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><a class="partners"> Resources</a></h4>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+    <script >
+         $("#login").on('click', function(){
+        $("#modal").modal({show:true});
+    }); //Show Modal
+
+    $("#close").on('click', function(){
+        $("#modal").modal('hide');
+    });
+    </script>
+
 </body>
+
 </html>
