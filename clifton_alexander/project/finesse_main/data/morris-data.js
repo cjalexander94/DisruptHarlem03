@@ -64,14 +64,18 @@ $(function() {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Download Sales",
-            value: 12
+            label: "Food & Dining",
+            value: 120
         }, {
-            label: "In-Store Sales",
-            value: 30
+            label: "Financial",
+            value: 375
         }, {
-            label: "Mail-Order Sales",
-            value: 20
+            label: "Retail spending",
+            value: 750
+        },
+           {
+            label: "Uncategorized spending",
+            value: 1000
         }],
         resize: true
     });
@@ -79,31 +83,31 @@ $(function() {
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
-            y: '2006',
+            y: 'March',
             a: 100,
             b: 90
         }, {
-            y: '2007',
+            y: 'April',
             a: 75,
             b: 65
         }, {
-            y: '2008',
+            y: 'May',
             a: 50,
             b: 40
         }, {
-            y: '2009',
+            y: 'June',
             a: 75,
             b: 65
         }, {
-            y: '2010',
+            y: 'July',
             a: 50,
             b: 40
         }, {
-            y: '2011',
+            y: 'August',
             a: 75,
             b: 65
         }, {
-            y: '2012',
+            y: 'September',
             a: 100,
             b: 90
         }],

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../finesse_main/img/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Finesse</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" rel="stylesheet">
+
+    <style>
+    nav{
+        padding-top: 0;
+        margin-top: 69px !important;
+        position: fixed !important;
+        outline-color: #e7e7e7 !important;
+        outline-style: solid !important;
+        outline-width: 1px !important;
+        padding-right: 0px !important;
+    }
+
+    #logo{
+        width: 200px;
+        height:75px;
+
+    }
+
+    .menu{
+        background-color: #e7e7e7;
+        cursor: pointer;
+    }
+
+    #menu{
+        position: fixed;
+        /* left: 0; */
+        z-index: +1;
+        padding:3px;
+        margin-left: -3.8%;
+        border: solid 1px;
+        border-color:#C9C9C9;
+        border-left: none;
+        border-radius: 3px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .fa-bars{
+        font-size: 1.5em;
+    }
+
+    .help{
+        background-color: #e7e7e7;
+        cursor: pointer;
+
+    }
+
+    #help{
+        position: fixed;
+        right: 0px;
+        top: 100px;
+        z-index: +1;
+        border: solid 1px;
+        border-color:#C9C9C9 ;
+        border-right: none;
+        padding:3px;
+        border-radius: 3px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .fa-question-circle-o{
+        font-size:1.5em;
+    }
+    #wrapper{
+        margin-left: -250px;
+        transition: all .4s ease 0s;
+    }
+
+    #wrapper.active{
+        margin: -15px;
+    }
+
+    .container{
+        padding-left: 55px;
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<header>
+    <img src="C:\Users\cjale\Documents\DisruptHarlem03\clifton_alexander\project\finesse_main\img\finesse_logo3_t.png">
+</header>
+
+
+    <div id="wrapper" class="row shift">
+        <nav class="navbar-default sidebar col-lg-2" id="sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="#summary"><i class="fa fa-pie-chart fa-fw"></i> Summary</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-clock-o fa-fw"></i> Transaction History<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#transaction-history">This Month</a>
+                                </li>
+                                <li>
+                                    <a href="#">This Year</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#cash-flow"><i class="fa fa-money fa-fw"></i> Budget</a>
+                        </li>
+                        <li>
+                            <a href="#targets"><i class="fa fa-bullseye fa-fw"></i> Targets</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-institution fa-fw"></i> Financial Statements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Income Statement</a>
+                                </li>
+                                <li>
+                                    <a href="#">Balance Sheet</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cash Flow</a>
+                                </li>
+                        </li>
+                        </ul>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Account Setings</a>
+                            </li>
+                    </ul>
+                </div>
+                <div></div>
+                <!-- /.sidebar-collapse -->
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div class="container col-lg-10 col-lg-offset-2">
+            <div class="row"> 
+                <div class="col-lg-12">
+                    <h1 class="page-header">Welcome to Finesse</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+            <div class= "menu shift fa fa-bars" id="menu"></div>
+            <div class= "help fa fa-question-circle-o" id="help"></div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Total Spending
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="container-donut"></div>
+                            <a href="#" class="btn btn-default btn-block">View Details</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+
+                <div class="col-lg-6" id="summary">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-tasks fa-fw"></i> Activity Summary
+                        </div>
+                        <!-- panel-heading -->
+                        <div class="panel-body">
+                        <h4>You are using 85% of your available credit.</h4>
+                        <hr>
+                        <h4>You are $100 over budget for this month.</h4>
+                        <hr>
+                        <h4>You are $35 short of your monthly savings.</h4>
+                        <hr>
+                        <h4>Your portfolio is at a 10.5% net return on the year.</h4>
+                        <hr>
+                        <h4>You got charged a fee for using an foreign ATM.</h4>
+                        <hr>                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+
+                <div class="col-lg-10 col-lg-offset-1" id="transaction-history">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        <i class="fa fa-clock-o fa-fw"></i>
+                            Transaction History <button class="button-default" style="float: right;"><small>Add Transaction</small></button>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-transactions">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Company</th>
+                                        <th>Price</th>
+                                        <th>Account</th>
+                                        <th>Category</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>9/05/2016</td>
+                                        <td>Sam's Club</td>
+                                        <td>$95.50</td>
+                                        <td>Checking Primary  x4327</td>
+                                        <td>Shopping</td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td>9/10/2016</td>
+                                        <td>CVS</td>
+                                        <td>$20.95</td>
+                                        <td>checking Primary x4327</td>
+                                        <td>Shopping</td>
+                                    </tr>
+                                    <tr class="odd gradeA">
+                                        <td>9/15/2016</td>
+                                        <td>Macy's</td>
+                                        <td>$275.80</td>
+                                        <td>Chase Credit Card x1940</td>
+                                        <td>Retail</td>
+                                    </tr>
+                                    <tr class="even gradeA">
+                                        <td>9/21/2016</td>
+                                        <td>Dell</td>
+                                        <td>$1,750.75</td>
+                                        <td>Chase Credit Card x1940</td>
+                                        <td>Shopping</td>
+                                    </tr>
+                                    <tr class="odd gradeA">
+                                        <td>9/30/2016</td>
+                                        <td>Delta Fuel Stop</td>
+                                        <td>$23.00</td>
+                                        <td>Checking Primary x4327</td>
+                                        <td>Car and Auto</td>
+                                    </tr>
+                                    <tr class="even gradeA">
+                                        <td>10/3/2016</td>
+                                        <td>Chase Bank</td>
+                                        <td>$160</td>
+                                        <td>Checking Primary x4327</td>
+                                        <td>Cash</td>
+                                    </tr>
+                                    <tr class="gradeA">
+                                        <td>10/4/2016</td>
+                                        <td>Geico Insueance </td>
+                                        <td>$255.30</td>
+                                        <td>American Express x2971</td>
+                                        <td>Car and Auto</td>
+                                    </tr>
+                                    <tr class="gradeA">
+                                        <td>10/12/2016</td>
+                                        <td>Chase</td>
+                                        <td>$53.70</td>
+                                        <td>Checking Primary x4327</td>
+                                        <td>Financing Fees</td>
+                                    </tr>
+                                    <tr class="gradeA">
+                                        <td>10/17/2016</td>
+                                        <td>Delta Airlines</td>
+                                        <td>$895.25</td>
+                                        <td>American Express x2971</td>
+                                        <td>Travel</td>
+                                    </tr>
+                                    <tr class="gradeA">
+                                        <td>10/17/2016</td>
+                                        <td>Air B&amp;B</td>
+                                        <td>$475</td>
+                                        <td>American Express x2971</td>
+                                        <td>Travel</td>
+                                    </tr>
+                                    <tr class="gradeA">
+                                        <td>10/19/2016</td>
+                                        <td>Wendy's</td>
+                                        <td>$15.39</td>
+                                        <td>Cash/ Manual Entry</td>
+                                        <td>Food and Dining</td>
+                                    </tr>
+                                    <tr class="gradeA">
+                                        <td>10/19/2016</td>
+                                        <td>Venmo</td>
+                                        <td>$100</td>
+                                        <td>Checking Primary x4327</td>
+                                        <td>Miscelaneous</td>
+                                    </tr>               
+                                </tbody>
+                            </table>
+                        <!-- /.table-responsive -->
+
+                        </div>
+                        <!-- /.panel-body -->
+                </div><!-- /.col-lg-8 -->
+                    </div>
+                    <!-- /.panel -->
+                     
+            </div>
+            <!-- /.row -->
+
+            
+            <div class="row" id="cash-flow">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Monthly Cash Flow
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                          <div id="container-budget" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+                            <br>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-info-circle fa-fw"></i> Your Tips <span class="badge">15</span>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-car fa-fw"></i> Save money on car insurance with Snapshot!
+                                </a>
+                               <!-- <a href="#" class="list-group-item">
+                                    <i class="fa fa-twitter fa-fw"></i> 
+                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a> -->
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-road fa-fw"></i> Start putting money into your 401K to secure your future down the road
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-credit-card fa-fw"></i> Browse which cards are best for you
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-warning fa-fw"></i> You are spending 85% of your available credit, this can hurt your credit score
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-shopping-cart fa-fw"></i> You have exceeded your monthly shopping budget
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-money fa-fw"></i> Use your bank's ATM to avoid convenience fees
+                                </a>
+                            </div>
+                            <!-- /.list-group -->
+                            <a href="#" class="btn btn-default btn-block">View All Tips</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel-default -->
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row-->
+
+
+            <div class="row">
+                <div class="col-lg-8">
+                <div class="panel panel-default" id="targets">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> Monthly Budget Realization
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#">View Yearly</a>
+                                    </li>
+                                    <li><a href="#">Include spending</a>
+                                    </li>
+                                    <li><a href="#">Connect targets</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">View Keep the Change settings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Amount Spent</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>3/15/2016</td>
+                                                <td>$321.33</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>4/21/2016</td>
+                                                <td>$2340.34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5/21/2016</td>
+                                                <td>$724.17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6/21/2016</td>
+                                                <td>$230.71</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7/21/2016</td>
+                                                <td>$8345.23</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8/21/2016</td>
+                                                <td>$245.12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9/21/2016</td>
+                                                <td>$5663.54</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10/21/2016</td>
+                                                <td>$943.45</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.col-lg-4 (nested) -->
+                            <div class="col-lg-8">
+                                <div id="container-savings"></div>
+                            </div>
+                            <!-- /.col-lg-8 (nested) -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+                
+                <div class="col-lg-4">
+                <div class="chat-panel panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-comments fa-fw"></i> Live Financial Help
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu slidedown">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-refresh fa-fw"></i> Refresh
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-check-circle fa-fw"></i> Available
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-times fa-fw"></i> Busy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-clock-o fa-fw"></i> Away
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <ul class="chat">
+                            <li class="left clearfix">
+                                <span class="chat-img pull-left">
+                                    <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                                </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <strong class="primary-font">John Doe</strong>
+                                        <small class="pull-right text-muted">
+                                            <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                        </small>
+                                    </div>
+                                    <p>
+                                        Hello,<br> can you please tell me how I can save money on brokerage fees for my investment accounts.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="right clearfix">
+                                <span class="chat-img pull-right">
+                                <!-- Use Finesse logo -->
+                                    <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
+                                </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <small class=" text-muted">
+                                            <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
+                                        <strong class="pull-right primary-font">Investment Support</strong>
+                                    </div>
+                                    <p>
+                                        Hello John,<br> you can save by signing up for our Partner, Robin hood. They allow you to invest without brokerge fees by being completely mobile.
+                                    </p>
+                                </div>
+                                <!-- /chat-body -->
+                            </li>
+                            <li class="left clearfix">
+                                <span class="chat-img pull-left">
+                                    <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                                </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <strong class="primary-font">John Doe</strong>
+                                        <small class="pull-right text-muted">
+                                            <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
+                                    </div>
+                                    <p>
+                                        Thank you, I will download Robinhood now.
+                                    </p>
+                                </div>
+                                <!-- /chat-body -->
+                            </li>
+                            <li class="right clearfix">
+                                <span class="chat-img pull-right">
+                                    <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
+                                </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <small class=" text-muted">
+                                            <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
+                                        <strong class="pull-right primary-font">Investment Support</strong>
+                                    </div>
+                                    <p>
+                                        No Problem John. If you have any other questions, feel free to chat with us!
+                                    </p>
+                                </div>
+                                <!-- /chat-body -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.panel-body -->
+                    <div class="panel-footer">
+                        <div class="input-group">
+                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..."> 
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning btn-sm" id="btn-chat">
+                                    Send
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /.panel-footer -->
+                </div>
+                <!-- /.panel .chat-panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    
+    </div>
+    <!-- /.wrapper -->
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+     <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!--Bar chart Theme Javascript -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="../data/highchart-data.js"></script>
+
+
+    <script>
+        $("#menu").click(function(e) {
+        e.preventDefault();
+        $(".shift").toggleClass("active");
+        });
+
+         $("#help").click(function(e) {
+        e.preventDefault();
+        $(".tooltips").toggle("show");
+        });
+    </script>
+
+</body>
+
+</html>

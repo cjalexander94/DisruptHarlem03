@@ -3,13 +3,15 @@
 
 <head>
 
+    <link rel="shortcut icon" type="image/x-icon" href="../project/img/favicon.ico">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FINesse - The Personal Finance Solution</title>
+    <title>Finesse - The Personal Finance Solution</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +28,12 @@
     <link href="css/creative.min.css" rel="stylesheet">
 
     <style>
+
+       /*.fill{
+        width: 100%;
+        height: auto;
+       } */
+
        #modal{
         width: 400px;
         background: #CACACA;
@@ -63,26 +71,27 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html#page-top">Finesse</a>
+                <a class="navbar-brand page-scroll" href="index.html#page-top">-->
+                <a href="index.html#page-top"><img class="img-responsive" src="..\project\img\finesse_logo_blank.png" style="height: 60px; width: 160px;"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="index.html#about">About</a>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html#services">Services</a>
+                        <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html#features">Features</a>
+                        <a class="page-scroll" href="#features">Features</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -102,9 +111,9 @@
         </div>
     </header>
 
-   <section id="modal" class="modal fade">
+   <div id="modal" class="modal fade">
 
-       <div class="modal-body">
+       <div class="modal-body" >
            <form action="login.php" method="post" role="form">
 
            <span id="close" onclick="close();" class="glyphicon glyphicon-remove pull-right"></span>
@@ -125,13 +134,13 @@
                </label>
            </div><!--Checkbox-->
 
-           <button type"submit" class="btn btn-default">Submit</button>
+           <a href="../project/finesse_main/pages/main-page.html" class="btn btn-default">Submit</a>
 
-           <p>Don't have an account?<a href="sig-nup.html">Sign Up!<a></p>
+           <p>Don't have an account?<a href="../project/finesse_main/pages/signup-form.html">Sign Up!<a></p>
          
            </form><!--Form-->
        </div><!--Modal Body-->
-   </section><!--Modal-->
+   </div><!--Modal-->
 
     <section class="bg-primary" id="about">
         <div class="container">
@@ -308,7 +317,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Start to Finesse now!</h2>
-                <a href="sign-up.html" class="btn btn-default btn-xl sr-button">Sign Up</a>
+                <a href="../project/finesse_main/pages/signup-form.html" class="btn btn-default btn-xl sr-button">Sign Up</a>
             </div>
         </div>
     </aside>
@@ -408,6 +417,11 @@
 
     $("#close").on('click', function(){
         $("#modal").modal('hide');
+    });
+
+   $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 100
     });
     </script>
 
