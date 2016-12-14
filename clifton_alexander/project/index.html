@@ -35,36 +35,44 @@
        } */
 
        #modal{
-        width: 400px;
-        background: #CACACA;
-        height: 300px;
-        box-shadow: 8px 8px 10px 4px;
-        margin: 0 auto;
-        margin-top:12%;
-        border-radius: 5px;
+            width: 400px;
+            background: #CACACA;
+            height: 300px;
+            box-shadow: 8px 8px 10px 4px;
+            margin: 0 auto;
+            margin-top:12%;
+            border-radius: 5px;
        }
 
        #close{
-        position: absolute;
-        right: -5px;
-        top:10px;
+            position: absolute;
+            right: -5px;
+            top:10px;
        }
 
        .glyphicon.hover{
-        color: red;
-    }
+            color: red;
+        }
 
        .bg-primary-gradient{
-        background: #57bc90; /* For browsers that do not support gradients */    
-        background: -webkit-linear-gradient(left top, #57bc90, #77C9D4); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(bottom right, #57bc90, #77C9D4); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(bottom right, #57bc90, #77C9D4); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to bottom right, #57bc90, #77C9D4); /* Standard syntax (must be last) */
-    }
-
-        .section-heading-alt{
-        color: white;
+            background: #57bc90; /* For browsers that do not support gradients */    
+            background: -webkit-linear-gradient(left top, #57bc90, #77C9D4); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(bottom right, #57bc90, #77C9D4); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(bottom right, #57bc90, #77C9D4); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to bottom right, #57bc90, #77C9D4); /* Standard syntax (must be last) */
         }
+
+        .bs-offset{
+            color: #015249;
+        }
+
+        .end-links{
+            list-style-type: none;
+        }
+
+        .portfolio-box{
+           /* max-height: 5em; */
+        } 
 
     </style>
 
@@ -100,7 +108,7 @@
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#features">Features</a>
+                        <a class="page-scroll" href="#partners">Partners</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -159,13 +167,13 @@
             <div class="row">
 
                 <div class="col-lg-6 col-md-6 ">
-                     <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt=""><!--Video-->
+                     <img src="img/video_thumbnail.png" class="img-responsive" alt=""><!--Video-->
                 </div>
                 <div class="col-lg-6 col-md-6 text-center">
-                    <h2 class="section-heading-alt">See how easy it is to Finesse!</h2>
+                    <h2 class="section-heading-alt bs-offset">See how easy it is to Finesse!</h2>
                     <hr class="light">
                     <p class="text-faded">Watch this video and see how easy it is for users to track their finances, start savings plans, generate financial statements, and receive helpful advice that allosw them to make important lifestyle changes necessary to staying financially secure.</p>
-                    <i href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</i>
+                    <a href="../project/finesse_main/pages/signup-form.html" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
                 </div>
             </div>
         </div>
@@ -207,104 +215,9 @@
         </div>
     </section>
 
-    <section class="no-padding" id="features"><!-- maybe include pictures of App screens-->
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="services" class="bg-primary-gradient">
+
+    <section class="bg-primary-gradient bs-offset">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -319,7 +232,7 @@
                         <i class="fa fa-lock fa-5x sr-icons" style="margin: -15px;"></i>
                         <br>
                         <br>
-                        <p >Our system runs through your bank and your information is protected on both ends.</p>
+                        <p>Our system runs through your bank and your information is protected on both ends.</p>
                     </div>
             </div>
         </div>
@@ -333,6 +246,103 @@
             </div>
         </div>
     </aside>
+
+    <section class="no-padding" id="partners"><!-- maybe include pictures of App screens-->
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/hba_logo_1.jpg" class="portfolio-box">
+                        <img src="img/hba_thumbnail.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Financial Literacy Outreach
+                                </div>
+                                <div class="project-name">
+                                    Harlem Business Alliance
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/yodlee_logo.png" class="portfolio-box">
+                        <img src="img/yodlee_thumbnail.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Account Management
+                                </div>
+                                <div class="project-name">
+                                    Yodlee
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/chase_logo.png" class="portfolio-box">
+                        <img src="img/chase_thumbnail.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Credit Card Services
+                                </div>
+                                <div class="project-name">
+                                    Chase
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/investopedia_logo.png" class="portfolio-box">
+                        <img src="img/investopedia_thumbnail.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Financial Dictionary
+                                </div>
+                                <div class="project-name">
+                                    Investopedia
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/geico_logo.png" class="portfolio-box">
+                        <img src="img/geico_thumbnail.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Car Insurance
+                                </div>
+                                <div class="project-name">
+                                    Geico
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/northwesternmutual_logo.png" class="portfolio-box">
+                        <img src="img/northwesternmutual_thumbnail.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Financial Advisors
+                                </div>
+                                <div class="project-name">
+                                    Northwestern Mutual
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contact">
         <div class="container">
@@ -357,13 +367,14 @@
 
 
     <footer>
-         <div class="col-md-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-8 col-sm-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4><a class="about" href="#"> About</a></h4>
                     </div>
                     <div class="panel-body">
-                        <ul>
+                        <ul class="end-links">
                             
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Team</a></li>
@@ -374,13 +385,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+        
+            <div class="col-lg-4 col-md-4 col-sm-8 col-sm-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4><a class="approach">Approach</a></h4>
                     </div>
                     <div class="panel-body">
-                    <ul>
+                    <ul class="end-links">
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Results</a></li>
                     </ul>
@@ -390,13 +402,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-8 col-sm-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4><a class="partners"> Resources</a></h4>
                     </div>
                     <div class="panel-body">
-                        <ul>
+                        <ul class="end-links">
                         <li><a href="#">Press</a></li>
                         <li><a href="#">Privacy</a></li>
                         <li><a href="#">Terms of Service</a></li>
@@ -422,19 +434,19 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
-    <script >
-         $("#login").on('click', function(){
+    <script>
+        $("#login").on('click', function(){
         $("#modal").modal({show:true});
-    }); //Show Modal
+        }); //Show Modal
 
-    $("#close").on('click', function(){
-        $("#modal").modal('hide');
-    });
+        $("#close").on('click', function(){
+            $("#modal").modal('hide');
+        });
 
-   $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 100
-    });
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 100
+        });
     </script>
 
 </body>
