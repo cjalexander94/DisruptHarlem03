@@ -31,161 +31,158 @@
     <link href="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" rel="stylesheet">
 
     <style>
-        .help{
+
+    nav{
+        padding-top: 0;
+        margin-top: 69px !important;
+        position: fixed !important;
+        outline-color: #e7e7e7 !important;
+        outline-style: solid !important;
+        outline-width: 1px !important;
+        padding-right: 0px !important;
+    }
+
+    #logo{
+        width: 200px;
+        height:75px;
+
+    }
+
+    .menu{
         background-color: #e7e7e7;
         cursor: pointer;
-        }
+    }
 
-        #help{
-            position: fixed;
-            right: 0px;
-            top: 100px;
-            z-index: +1;
-            border: solid 1px;
-            border-color:#C9C9C9 ;
-            border-right: none;
-            padding:3px;
-            border-radius: 3px;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
+    #menu{
+        position: fixed;
+        /* left: 0; */
+        z-index: +1;
+        padding:3px;
+        margin-left: -3.8%;
+        border: solid 1px;
+        border-color:#C9C9C9;
+        border-left: none;
+        border-radius: 3px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 
-        .fa-navicon{
-            padding:3px;
-            border: solid 1px;
-            border-color:#C9C9C9;
-            border-left: none;
-            border-radius: 3px;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+    .fa-bars{
+        font-size: 1.5em;
+    }
 
-        html, body {
-           height: 100%;
-        }
+    .help{
+        background-color: #e7e7e7;
+        cursor: pointer;
 
-        .wrapper, .row {
-           height: 100%;
-           margin-left:0;
-           margin-right:0;
-        }
+    }
 
-        .wrapper:before, .wrapper:after,
-        .column:before, .column:after {
-            content: "";
-            display: table;
-        }
+    #help{
+        position: fixed;
+        right: 0px;
+        top: 100px;
+        z-index: +1;
+        border: solid 1px;
+        border-color:#C9C9C9 ;
+        border-right: none;
+        padding:3px;
+        border-radius: 3px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .fa-question-circle-o{
+        font-size:1.5em;
+    }
+    #wrapper{
+        margin-left: -16.5%;
+        transition: all .4s ease 0s;
+    }
 
-        .wrapper:after,
-        .column:after {
-            clear: both;
-        }
+    #wrapper.active{
+        margin: .0038%;
+    }
 
-        #sidebar {
-            background-color:#eee;
-            padding-left:5px;
-        }
-
-        #sidebar .collapse.in {
-            display:inline !important;
-        }
-
-
-        /*
-         * off canvas sidebar
-         * --------------------------------------------------
-         */
-        @media screen and (min-width: 768px) {
-          .row-offcanvas {
-            position: relative;
-            -webkit-transition: all 1.45s ease-out;
-            -moz-transition: all 1.45s ease-out;
-            transition: all 1.45s ease-out;
-          }
-
-          .row-offcanvas-left.active {
-            left: 3%;
-          }
-
-          .row-offcanvas-left.active .sidebar-offcanvas {
-            left: -3%;
-            position: absolute;
-            top: 0;
-            width: 3%;
-            text-align:center;
-          }
-
-        }
+    .container{
+        padding-left: 55px;
+    }
     </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
 <body>
+<header>
+    <img src="../img/finesse_logo3_t.png">
+</header>
 
-    <header>
-        <img src="../img/finesse_logo3_t.png">
-    </header>
 
-    <div class="wrapper">
-        <div class="box">
-            <div class="row row-offcanvas row-offcanvas-left">
-                          
-              
-                <!-- sidebar --><!--
-                <nav class="navbar-default sidebar col-xl-2 col-lg-2 col-lg-2 col-sm-2 col-xs-1" id="sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse"> -->
-                <nav class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-                    <ul class="nav" id="menu">
-                            <li>
-                                <a href="#summary"><i class="fa fa-pie-chart fa-fw"></i><span class="collapse in"> Summary</span></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-clock-o fa-fw"></i><span class="collapse in"> Transaction History</span><span class="fa arrow collapse in"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="#transaction-history"><span class="collapse in"> This Month</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="collapse in"> This Year</span></a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="#cash-flow"><i class="fa fa-money fa-fw"></i><span class="collapse in"> Budget</span></a>
-                            </li>
-                            <li>
-                                <a href="#targets"><i class="fa fa-bullseye fa-fw"></i><span class="collapse in"> Targets</span></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-institution fa-fw"></i><span class="collapse in"> Financial Statements</span><span class="collapse in fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="#"><span class="collapse in">Income Statement</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="collapse in">Balance Sheet</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="collapse in">Cash Flow</span></a>
-                                    </li>
-                            </li>
+    <div id="wrapper" class="row shift">
+        <nav class="navbar-default sidebar col-lg-12" id="sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="#summary"><i class="fa fa-pie-chart fa-fw"></i> Summary</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-clock-o fa-fw"></i> Transaction History<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#transaction-history">This Month</a>
+                                </li>
+                                <li>
+                                    <a href="#">This Year</a>
+                                </li>
                             </ul>
-                            <li>
-                                <a href="#"><i class="fa fa-gear fa-fw"></i><span class="collapse in"> Account Settings</span></a>
-                            </li>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#cash-flow"><i class="fa fa-money fa-fw"></i> Budget</a>
+                        </li>
+                        <li>
+                            <a href="#targets"><i class="fa fa-bullseye fa-fw"></i> Targets</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-institution fa-fw"></i> Financial Statements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Income Statement</a>
+                                </li>
+                                <li>
+                                    <a href="#">Balance Sheet</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cash Flow</a>
+                                </li>
+                        </li>
+                        </ul>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Account Settings</a>
+                        </li>
                     </ul>
+                </div>
+                <div></div>
+                <!-- /.sidebar-collapse -->
+            <!-- /.navbar-static-side -->
+        </nav>
 
-                </nav>
-                <!-- /sidebar -->
-              
-                <!-- main right col -->
-                <div class="column col-sm-10 col-xs-11" id="main">
-                    
-           
-                  <a href="#" data-toggle="offcanvas" style="padding-left: 0;"><i class="fa fa-navicon"></i></a>
-               
-         <div class="container col-xl-12 col-lg-12>
+        <div class="container col-xl-10 col-xl-offset-2 col-lg-10 col-lg-offset-2">
             <div class="row"> 
                 <div class="col-xl-12 col-lg-12">
                     <h1 class="page-header">Welcome to Finesse</h1>
@@ -193,6 +190,7 @@
                 <!-- /.col-lg-12 -->
             </div>
             
+            <div class= "menu shift fa fa-bars" id="menu"></div>
             <div class= "help fa fa-question-circle-o" id="help"></div>
 
             <div class="row">
@@ -626,15 +624,7 @@
         <!-- /.container -->
     
     </div>
-    <!-- /.wrapper -->     
-                </div>
-                <!-- /main -->
-              
-            </div>
-        </div>
-    </div>
-
-
+    <!-- /.wrapper -->
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
 
@@ -658,13 +648,19 @@
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="../data/highchart-data.js"></script>
 
+
     <script>
-        $('[data-toggle=offcanvas]').click(function() {
-        $('.row-offcanvas').toggleClass('active');
-        //$('#sidebar').toggleClass('col-xs-1');
-        $('.collapse').toggleClass('in');
+        $("#menu").click(function(e) {
+        e.preventDefault();
+        $(".shift").toggleClass("active");
+        });
+
+        $("#help").click(function(e) {
+        e.preventDefault();
+        $(".tooltips").toggle("show");
         });
     </script>
 
-
 </body>
+
+</html>
